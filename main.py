@@ -11,7 +11,7 @@ start = time.time()
 from keras.models import load_model
 model = load_model('cnn.h5')
 def main():
-        img = cv2.imread("/home/akanksha/Desktop/img/file (3).jpeg")
+        img = cv2.imread("./img/file (3).jpeg")
         print("shape",img.shape)
         print("shape1",img.shape)
         img = crop(img)
@@ -22,7 +22,7 @@ def main():
 ##        cv2.imshow("nan.jpg",img)
         ret,img = cv2.threshold(img,110,255,cv2.THRESH_BINARY)
         cv2.imwrite("croppy.jpg",img)
-        cv2.imshow("seg",img)
+        #cv2.imshow("seg",img)
 ##        print(img)
 
         n=seg(img)
@@ -39,7 +39,7 @@ def main():
                         continue
                 predict(n[i],model)
                 cv2.imwrite("a"+str(i)+".jpg",n[i])
-                cv2.imshow("s"+str(i),n[i])
+                #cv2.imshow("s"+str(i),n[i])
         
 	
 

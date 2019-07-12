@@ -130,7 +130,7 @@ def crop(image):
     cv2.rectangle(orig, (startX-10, startY-10), (endX+10, endY+10), (0, 255, 0), 2)
     roi = orig[startY:endY+10, startX:endX+10]
     cv2.imwrite("roi.jpg",roi)
-    cv2.imshow("crop",orig)
+    #cv2.imshow("crop",orig)
     return roi
 
      #show the output image

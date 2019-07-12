@@ -87,7 +87,7 @@ def seg(image):
 	# read image, prepare it by resizing it to fixed height and converting it to grayscal
 ##	print(image)
 	img = prepareImg(image, 50)
-	print(img.shape)
+	#print(img.shape)
 ##	img=  cv2.cvtColor(img,cv2.COLOR_BGR2GRAY);
 		# execute segmentation with given parameters
 		# -kernelSize: size of filter kernel (odd integer)
